@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_L46R8LwjEeiPff_RP6_xDg" name="uml_scp_opportunity_management">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_ujzhcLzYEeiHWfO7YZHcQg">
+    <body>In this Diagram an Entity is a DB Table. For each DB table are implemented Create, Read, Update, Delete operation</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_NLnh0LzlEeiHWfO7YZHcQg">
+    <body>For developers only</body>
+  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_MCDm4LwjEeiPff_RP6_xDg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -102,6 +108,65 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_GcXJcLzCEeiHWfO7YZHcQg" name="Customer.custID = CustomerOpportunity.custID" client="_XKh-oLy8EeiHWfO7YZHcQg" supplier="_zJQv0Ly7EeiHWfO7YZHcQg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_Yx8ZoLzCEeiHWfO7YZHcQg" name="CustomerOpportunity.oppID = Opportunity.id" client="_zJQv0Ly7EeiHWfO7YZHcQg" supplier="_itaZsLzBEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_OyWboLzQEeiHWfO7YZHcQg" name="EntityCRUD">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fZEHgLzWEeiHWfO7YZHcQg" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_DQsO8LzTEeiHWfO7YZHcQg" contract="_DQsO8LzTEeiHWfO7YZHcQg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ghzbwLzXEeiHWfO7YZHcQg" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_KGrSgLzXEeiHWfO7YZHcQg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_NEVhALzYEeiHWfO7YZHcQg" name="allDBOperations" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_1RZQQLzXEeiHWfO7YZHcQg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_DQsO8LzTEeiHWfO7YZHcQg" name="OperationsCRUD"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_INWZYLzXEeiHWfO7YZHcQg" name="DB Connetcion">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fIITELzXEeiHWfO7YZHcQg" client="_INWZYLzXEeiHWfO7YZHcQg" supplier="_KGrSgLzXEeiHWfO7YZHcQg" contract="_KGrSgLzXEeiHWfO7YZHcQg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_IDF0sLzYEeiHWfO7YZHcQg" name="dbConnection" client="_INWZYLzXEeiHWfO7YZHcQg" supplier="_1RZQQLzXEeiHWfO7YZHcQg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_KGrSgLzXEeiHWfO7YZHcQg" name="Connection">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MUt3YLzXEeiHWfO7YZHcQg" name="connection"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_tGvjALzXEeiHWfO7YZHcQg" name="JPA">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FrMJMLzYEeiHWfO7YZHcQg" client="_tGvjALzXEeiHWfO7YZHcQg" supplier="_1RZQQLzXEeiHWfO7YZHcQg" contract="_1RZQQLzXEeiHWfO7YZHcQg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_1RZQQLzXEeiHWfO7YZHcQg" name="DB Acess">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8ak5cLzXEeiHWfO7YZHcQg" name="dbConnection"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__YI2wLzXEeiHWfO7YZHcQg" name="allDBOperations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_x0wfYLzZEeiHWfO7YZHcQg" name="Apache Olingo Odata Service">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_ppLdsLzcEeiHWfO7YZHcQg" name="Entity" type="_3gXscLzbEeiHWfO7YZHcQg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_IEjJELzfEeiHWfO7YZHcQg" name="Entity Set" type="_92CtsLzeEeiHWfO7YZHcQg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_I3HcMLzkEeiHWfO7YZHcQg" name="CRUD" type="_DQsO8LzTEeiHWfO7YZHcQg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_hQLcULzlEeiHWfO7YZHcQg" name="Metadata" type="_Zzb98LzlEeiHWfO7YZHcQg" aggregation="composite"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_3gXscLzbEeiHWfO7YZHcQg" name="SingleEntityRequest">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LLhBYLzcEeiHWfO7YZHcQg" name="getEntity"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_i8VyQLzcEeiHWfO7YZHcQg" name="updateEntity"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nBN88LzcEeiHWfO7YZHcQg" name="createEntity"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_92CtsLzeEeiHWfO7YZHcQg" name="EntitySet">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_BNqw0LzfEeiHWfO7YZHcQg" name="getEtitySet"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_Zzb98LzlEeiHWfO7YZHcQg" name="metadata"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_92sAMLzZEeiHWfO7YZHcQg" name="ColletcionProcessor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EaocELzfEeiHWfO7YZHcQg" client="_92sAMLzZEeiHWfO7YZHcQg" supplier="_92CtsLzeEeiHWfO7YZHcQg" contract="_92CtsLzeEeiHWfO7YZHcQg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_ovXnMLzkEeiHWfO7YZHcQg" client="_92sAMLzZEeiHWfO7YZHcQg" supplier="_I3HcMLzkEeiHWfO7YZHcQg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_E01eELzaEeiHWfO7YZHcQg" name="EntitiProcessor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_a8d8MLzdEeiHWfO7YZHcQg" client="_E01eELzaEeiHWfO7YZHcQg" supplier="_3gXscLzbEeiHWfO7YZHcQg" contract="_3gXscLzbEeiHWfO7YZHcQg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_q6WRALzkEeiHWfO7YZHcQg" client="_E01eELzaEeiHWfO7YZHcQg" supplier="_I3HcMLzkEeiHWfO7YZHcQg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_B1FvcLzaEeiHWfO7YZHcQg" name="EdmProvider">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_csqN0LzlEeiHWfO7YZHcQg" client="_B1FvcLzaEeiHWfO7YZHcQg" supplier="_Zzb98LzlEeiHWfO7YZHcQg" contract="_Zzb98LzlEeiHWfO7YZHcQg"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_tFUX8LzdEeiHWfO7YZHcQg" client="_ppLdsLzcEeiHWfO7YZHcQg" supplier="_3gXscLzbEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Ymj_ULzeEeiHWfO7YZHcQg" name="SAP Fiori App">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_ee32gLzeEeiHWfO7YZHcQg" name="GET(Single), POST, UPDATE Requests" type="_3gXscLzbEeiHWfO7YZHcQg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_auoCkLzfEeiHWfO7YZHcQg" name="GET (Entity Set) Request" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_ueD3ELzeEeiHWfO7YZHcQg" client="_ee32gLzeEeiHWfO7YZHcQg" supplier="_ppLdsLzcEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_ZIdWALzfEeiHWfO7YZHcQg" client="_IEjJELzfEeiHWfO7YZHcQg" supplier="_92CtsLzeEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_qRZz8LzfEeiHWfO7YZHcQg" client="_auoCkLzfEeiHWfO7YZHcQg" supplier="_IEjJELzfEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_hv7I0LzkEeiHWfO7YZHcQg" client="_I3HcMLzkEeiHWfO7YZHcQg" supplier="_DQsO8LzTEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_AiCyMLzlEeiHWfO7YZHcQg" name="RestClient">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_q1lQULzlEeiHWfO7YZHcQg" client="_AiCyMLzlEeiHWfO7YZHcQg" supplier="_hQLcULzlEeiHWfO7YZHcQg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_sQaPkLzlEeiHWfO7YZHcQg" client="_hQLcULzlEeiHWfO7YZHcQg" supplier="_Zzb98LzlEeiHWfO7YZHcQg"/>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o86lsLy9EeiHWfO7YZHcQg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o89B8Ly9EeiHWfO7YZHcQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
