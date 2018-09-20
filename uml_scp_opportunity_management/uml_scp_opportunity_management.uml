@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_L46R8LwjEeiPff_RP6_xDg" name="uml_scp_opportunity_management">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_MCDm4LwjEeiPff_RP6_xDg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_ZOZFULwjEeiPff_RP6_xDg" name="Sales Rep"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_kyrA0LwjEeiPff_RP6_xDg" name="Customers List">
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_QoXRYLwoEeiPff_RP6_xDg" name="ExtensionPoint1"/>
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Ugq_sLwoEeiPff_RP6_xDg" name="ExtensionPoint2"/>
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_YSVTcLwoEeiPff_RP6_xDg" name="ExtensionPoint3"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6q4DMLwjEeiPff_RP6_xDg" name="Customer Details">
+    <extend xmi:type="uml:Extend" xmi:id="_QoEWcLwoEeiPff_RP6_xDg" extendedCase="_kyrA0LwjEeiPff_RP6_xDg" extensionLocation="_QoXRYLwoEeiPff_RP6_xDg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XmkrkLwmEeiPff_RP6_xDg" name="Create Opportunity">
+    <extend xmi:type="uml:Extend" xmi:id="_UgqYoLwoEeiPff_RP6_xDg" extendedCase="_kyrA0LwjEeiPff_RP6_xDg" extensionLocation="_Ugq_sLwoEeiPff_RP6_xDg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_nF6ucLwmEeiPff_RP6_xDg" name="Oppurtunity List">
+    <extend xmi:type="uml:Extend" xmi:id="_YSUFULwoEeiPff_RP6_xDg" extendedCase="_kyrA0LwjEeiPff_RP6_xDg" extensionLocation="_YSVTcLwoEeiPff_RP6_xDg"/>
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_maZaULwoEeiPff_RP6_xDg" name="ExtensionPoint2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BGqeELwoEeiPff_RP6_xDg" memberEnd="_BIlJoLwoEeiPff_RP6_xDg _BJoSgLwoEeiPff_RP6_xDg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BIUD4LwoEeiPff_RP6_xDg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BIb_sLwoEeiPff_RP6_xDg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BIlJoLwoEeiPff_RP6_xDg" name="customers list" type="_kyrA0LwjEeiPff_RP6_xDg" association="_BGqeELwoEeiPff_RP6_xDg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BJoSgLwoEeiPff_RP6_xDg" name="sales rep" type="_ZOZFULwjEeiPff_RP6_xDg" association="_BGqeELwoEeiPff_RP6_xDg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_fS_50LwoEeiPff_RP6_xDg" name="Edit Opportunity">
+    <extend xmi:type="uml:Extend" xmi:id="_maYMMLwoEeiPff_RP6_xDg" extendedCase="_nF6ucLwmEeiPff_RP6_xDg" extensionLocation="_maZaULwoEeiPff_RP6_xDg"/>
+  </packagedElement>
+</uml:Model>
