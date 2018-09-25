@@ -6,6 +6,12 @@
   <ownedComment xmi:type="uml:Comment" xmi:id="_NLnh0LzlEeiHWfO7YZHcQg">
     <body>For developers only</body>
   </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_n4IRoLzuEeiHWfO7YZHcQg">
+    <body>Automatically created by JPA Entity Editor</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_DE350MCfEei1bMtlFSXDgw">
+    <body>Static methods used by OppMngmtEntityProcess Class to get data from URI</body>
+  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_MCDm4LwjEeiPff_RP6_xDg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -108,11 +114,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_GcXJcLzCEeiHWfO7YZHcQg" name="Customer.custID = CustomerOpportunity.custID" client="_XKh-oLy8EeiHWfO7YZHcQg" supplier="_zJQv0Ly7EeiHWfO7YZHcQg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_Yx8ZoLzCEeiHWfO7YZHcQg" name="CustomerOpportunity.oppID = Opportunity.id" client="_zJQv0Ly7EeiHWfO7YZHcQg" supplier="_itaZsLzBEeiHWfO7YZHcQg"/>
-  <packagedElement xmi:type="uml:Component" xmi:id="_OyWboLzQEeiHWfO7YZHcQg" name="EntityCRUD">
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fZEHgLzWEeiHWfO7YZHcQg" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_DQsO8LzTEeiHWfO7YZHcQg" contract="_DQsO8LzTEeiHWfO7YZHcQg"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_ghzbwLzXEeiHWfO7YZHcQg" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_KGrSgLzXEeiHWfO7YZHcQg"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_NEVhALzYEeiHWfO7YZHcQg" name="allDBOperations" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_1RZQQLzXEeiHWfO7YZHcQg"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_DQsO8LzTEeiHWfO7YZHcQg" name="OperationsCRUD"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_INWZYLzXEeiHWfO7YZHcQg" name="DB Connetcion">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fIITELzXEeiHWfO7YZHcQg" client="_INWZYLzXEeiHWfO7YZHcQg" supplier="_KGrSgLzXEeiHWfO7YZHcQg" contract="_KGrSgLzXEeiHWfO7YZHcQg"/>
@@ -167,6 +168,35 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_q1lQULzlEeiHWfO7YZHcQg" client="_AiCyMLzlEeiHWfO7YZHcQg" supplier="_hQLcULzlEeiHWfO7YZHcQg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_sQaPkLzlEeiHWfO7YZHcQg" client="_hQLcULzlEeiHWfO7YZHcQg" supplier="_Zzb98LzlEeiHWfO7YZHcQg"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VUAWgLzrEeiHWfO7YZHcQg" name="com.eone.crud">
+    <packagedElement xmi:type="uml:Component" xmi:id="_OyWboLzQEeiHWfO7YZHcQg" name="EntityCRUD">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fZEHgLzWEeiHWfO7YZHcQg" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_DQsO8LzTEeiHWfO7YZHcQg" contract="_DQsO8LzTEeiHWfO7YZHcQg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_ghzbwLzXEeiHWfO7YZHcQg" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_KGrSgLzXEeiHWfO7YZHcQg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_NEVhALzYEeiHWfO7YZHcQg" name="allDBOperations" client="_OyWboLzQEeiHWfO7YZHcQg" supplier="_1RZQQLzXEeiHWfO7YZHcQg"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="__TBrQLztEeiHWfO7YZHcQg" name="com.eone.crud">
+    <packagedElement xmi:type="uml:Class" xmi:id="_6O8tYLztEeiHWfO7YZHcQg" name="OpportunityCRUD"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7l4rILztEeiHWfO7YZHcQg" name="CustomerOpportunityCRUD"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4zrpQLztEeiHWfO7YZHcQg" name="CustomerCRUD"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_YkTiQLzuEeiHWfO7YZHcQg" name="org.persistence">
+    <packagedElement xmi:type="uml:Class" xmi:id="_UMxhULzuEeiHWfO7YZHcQg" name="Customer"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VBI9gLzuEeiHWfO7YZHcQg" name="CustomerOpportunity"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TI4bYLzuEeiHWfO7YZHcQg" name="Opportunity"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_wYFVcMCcEei1bMtlFSXDgw" name="com.eone.services">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4TfFwMCcEei1bMtlFSXDgw" name="OppMngmtCollectionProcessr"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9GndkMCcEei1bMtlFSXDgw" name="OppMngmtEdmProvider"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ev6xQMCdEei1bMtlFSXDgw" name="OppMngmtEntityProcessor"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JCgn0MCdEei1bMtlFSXDgw" name="FilterExpressionVisitor"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_p34iYMCdEei1bMtlFSXDgw" name="com.eone.util">
+    <packagedElement xmi:type="uml:Class" xmi:id="_UL7W0MCeEei1bMtlFSXDgw" name="Util"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jg58wMCeEei1bMtlFSXDgw" name="com.eone.web">
+    <packagedElement xmi:type="uml:Class" xmi:id="_p4nswMCeEei1bMtlFSXDgw" name="OppMngmtServlet"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o86lsLy9EeiHWfO7YZHcQg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o89B8Ly9EeiHWfO7YZHcQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
