@@ -205,6 +205,19 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_o709gNObEeicqoNeireC2A" name="com.eone.loader">
     <packagedElement xmi:type="uml:Class" xmi:id="_t5JzINObEeicqoNeireC2A" name="FileLoader"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UYt5QNOwEeicqoNeireC2A" name="CustomerLoader">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_AdqDkNOxEeicqoNeireC2A" client="_UYt5QNOwEeicqoNeireC2A" supplier="_nom1kNOwEeicqoNeireC2A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_eaoqINOwEeicqoNeireC2A" name="FileLoader">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_tToesNOwEeicqoNeireC2A" client="_eaoqINOwEeicqoNeireC2A" supplier="_nom1kNOwEeicqoNeireC2A" contract="_nom1kNOwEeicqoNeireC2A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_nom1kNOwEeicqoNeireC2A" name="getFile"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ytmNANOwEeicqoNeireC2A" name="CustomerOpportunityLoader">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_-iUYQNOwEeicqoNeireC2A" client="_ytmNANOwEeicqoNeireC2A" supplier="_nom1kNOwEeicqoNeireC2A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_1TxlENOwEeicqoNeireC2A" name="OpportunityTextLoader">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_8855oNOwEeicqoNeireC2A" client="_1TxlENOwEeicqoNeireC2A" supplier="_nom1kNOwEeicqoNeireC2A"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o86lsLy9EeiHWfO7YZHcQg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o89B8Ly9EeiHWfO7YZHcQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
