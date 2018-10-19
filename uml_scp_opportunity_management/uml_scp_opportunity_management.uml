@@ -197,6 +197,14 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_jg58wMCeEei1bMtlFSXDgw" name="com.eone.web">
     <packagedElement xmi:type="uml:Class" xmi:id="_p4nswMCeEei1bMtlFSXDgw" name="OppMngmtServlet"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_rdrEoNOaEeicqoNeireC2A" name="com.eone.dataload">
+    <packagedElement xmi:type="uml:Class" xmi:id="_2Np1YNOaEeicqoNeireC2A" name="CustomerLoader"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6skQsNOaEeicqoNeireC2A" name="CustomerOpportunityLoader"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-klEENOaEeicqoNeireC2A" name="OpportunityTextLoader"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_o709gNObEeicqoNeireC2A" name="com.eone.loader">
+    <packagedElement xmi:type="uml:Class" xmi:id="_t5JzINObEeicqoNeireC2A" name="FileLoader"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o86lsLy9EeiHWfO7YZHcQg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o89B8Ly9EeiHWfO7YZHcQg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
